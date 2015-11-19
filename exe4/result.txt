@@ -4,5 +4,6 @@ exe2
 exe3
 exe4
 LICENSE
+modules
 package.json
 README.md
