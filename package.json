@@ -1,0 +1,25 @@
+{
+  "name": "nodejs_bootcamp",
+  "version": "1.0.0",
+  "description": "tutorial boot_camp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpblairon/nodejs_bootcamp.git"
+  },
+  "keywords": [
+    "formation",
+    "node",
+    "git",
+    "tehcnocite"
+  ],
+  "author": "JPB",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpblairon/nodejs_bootcamp/issues"
+  },
+  "homepage": "https://github.com/jpblairon/nodejs_bootcamp#readme"
+}
