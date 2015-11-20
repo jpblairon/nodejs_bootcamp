@@ -3,7 +3,7 @@ var http = require("http");
 // || = à (si pas)
 var port = process.argv[2] || 3000;
 var routes = {
-  "/api/friends": "datas/datas.json"
+  "/api/friends": "datas/datas.json",
 }
 var srv = http.createServer(function(req, res) {
   if(routes[req.url]){
