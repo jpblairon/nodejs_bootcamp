@@ -53,3 +53,16 @@ function updateFile() {
     });
   });
 }
+
+
+// version avec appendFile();
+//
+var fs = require('fs');
+var utils = require('../modules/utils');
+var args = process.argv;
+var elements = null;
+(args[2])? elements = args[2].split(','):elements=[];
+fs.appendFile('list.txt', utils.createNiceListofFiles(elements), function (err) {
+      if (err) throw err;
+      console.log('data was appended to file!');
+  });
