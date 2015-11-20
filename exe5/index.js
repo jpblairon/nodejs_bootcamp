@@ -18,7 +18,8 @@
 // });
 
 
-// version prof (à preferer)
+// version prof (à preferer) car test si fichier existe ou pas au depart
+// et si on à mis les arguments.
 var fs = require('fs');
 var utils = require('../modules/utils');
 var args = process.argv;
@@ -35,7 +36,6 @@ fs.stat('list.txt', function(err, stat) {
       if (err) throw err;
       updateFile();
   });
-
   }
   else {
     console.log('Some other error: ', err.code);
