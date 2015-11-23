@@ -1,9 +1,13 @@
-var moment = require('moment'),
+'use strict';
+let moment = require('moment'),
+http = require('http'),
 express = require('express'),
+bodyParser = require('body-parser'),
 friends = require(__dirname+'/modules/friends');
-let myfriends = friends(initApp);
+let myFriends = friends(initApp);
 function initApp(){
   let app = express();
+  app.use(bodyParser.json());
 
 // Envoie la date et la fin de l'URL demandée + le type d'envois
   app.use(function(req, res, next){
@@ -19,12 +23,18 @@ app.get('/api/friends/:id', function(req, res) {
   let id = parseInt(req.params.id);
   res.json(myFriends.getFriend(id));
 });
+// pour ajouter une donnée au fichier.json
+app.post('/api/friends',function(req, res){
+  res.json(myFriends.setFriend(req.body));
+});
 // s'il ne trouve pas l'URL correcte affiche un message erreur
 app.use(function(req, res) {
   res.status(404);
   res.send("The page "+ req.url+" don't exist");
 });
-// Ecoute le port 3000
-app.listen(3000,function(){
-console.log("Express started on localhost : 3000 \n Press CTRL+c to termine")
-})
+
+// Ecoute le port 80
+http.createServer(app).listen(80,function(){
+  console.log("Express started on localhost : 80 \n Press CTRL+c to termine")
+});
+}
