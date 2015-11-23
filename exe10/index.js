@@ -3,6 +3,7 @@ var moment = require('moment');
 var express = require('express');
 var app = express();
 
+
 // Envoie la date et la fin de l'URL demandée + le type d'envois
 app.use(function(req, res, next){
   console.log(moment().format()+'||'+req.url+'||'+req.method);
