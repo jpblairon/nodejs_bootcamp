@@ -37,10 +37,29 @@ function setFriend(ob){
     let currentId = maxId += 1;
     ob.id = currentId;
     friends.push(ob);
-    console.log(friends);
+  }
+  else {
+    let index = _.findIndex(friends, {'id':parseInt(id)})
+    if(index !== -1){
+      friends[index] = ob;
+    }
+    else {
+      console.log({"error":"no index was find"});
+    }
   }
   persistData();
   return friends;
+}
+
+// pour supprimer un id dans le fichier.json
+function deleteFriend(id){
+  let index = _.findIndex(friends, {'id':parseInt(id)}));
+  if(index !== -1){
+    _.pullAt(friends,index)
+  }
+  else {
+    persitData();
+    return friends;
 }
 
 //API Publique
@@ -48,6 +67,7 @@ var that = {};
 that.getFriend = getFriend;
 that.getAllFriends = getAllFriends;
 that.setFriend = setFriend;
+that.deleteFriend = deleteFriend;
 return that;
 }
 
