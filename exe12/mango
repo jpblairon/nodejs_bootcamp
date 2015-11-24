@@ -1,0 +1,31 @@
+db.restaurants.insert(
+  {
+    name:"Chez Gilles",
+    address:{
+      street:"rue des gents marrants",
+      number: 23,
+      city:"Mons",
+      zip:"7000"
+    },
+     phone:"0032485698741",
+     web:"http://www.pass.be",
+     type:['asiatique', 'chinoise'],
+     rating:3
+     }
+);
+
+db.restaurants.insert(
+  {
+    name:"Bobby la pointe",
+    address:{
+      street:"rue de la marelle",
+      number: 230,
+      city:"Bruxelles",
+      zip:"1000"
+    },
+     phone:"0032485698741",
+     web:"http://www.bruxelles.be",
+     type:['française'],
+     rating:5
+   }
+);
