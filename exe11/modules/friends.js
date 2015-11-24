@@ -1,6 +1,6 @@
 'use strict';
 var fs= require('fs'),
-_ = require('lodash');
+_ = require('lodash'); // permet de manipuler facilement les array et les objet (colection)
 function friends(cb) {
 //API PRIVEE
 //init data
@@ -27,7 +27,7 @@ function getAllFriends()
 
 // pour lire un id dans la liste du fichier.json
 function getFriend(id) {
-  return(_.find(friends, {'id' : id}));
+  return(_.find(friends, {'id' : id})); // _ utilise loadash
 }
 
 // pour ajouter un id dans le fichier.json
@@ -40,7 +40,7 @@ function setFriend(ob){
   }
   else {
     let index = _.findIndex(friends, {'id':parseInt(id)})
-    if(index !== -1){
+    if(index !== -1){ // il renvoie -1 quand il ne trouve pas l'index
       friends[index] = ob;
     }
     else {
@@ -62,7 +62,7 @@ function deleteFriend(id){
     return friends;
 }
 
-//API Publique
+//API Publique (fait en sorte que les fonction soit accessible en dehord du fichier)
 var that = {};
 that.getFriend = getFriend;
 that.getAllFriends = getAllFriends;
