@@ -1,5 +1,65 @@
 html {
-  margin: 0;
-  padding: 0;
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*,*:before,*:after{
+    box-sizing:inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#global_content {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.content {
+    width: 70%;
+    height: 600px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: blue;
+}
+
+#detailsResto {
+  display: none;
+}
+
+#listeResto {
+  width: 80%;
   background-color: lightblue;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.6em;
+  color: white;
+  text-transform: uppercase;
+}
+
+.btn {
+  width: 30px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: grey;
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn a:hover {
+  color: grey;
+}
+
+#btnDelete, #btnUpdate {
+  float: right;
 }

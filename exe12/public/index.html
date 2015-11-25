@@ -7,10 +7,26 @@
 </head>
 <body>
 <div id="global_content">
-  <h1>Liste des resaurants</h1>
-  <div id="resto"></div>
+  <!-- liste des restos -->
+  <section id="listeResto" class="content">
+    <h1>Liste des resaurants</h1>
+    <div id="liste">
+      <a class="nameResto" href="#"><a id="btnDelete" class="btn" href="#">Effacer</a></a>
+    </div>
+  </section>
+  <!-- details des restos -->
+    <section id="detailsResto" class="content">
+      <h1 id="nameResto" ></h1>
+      <div id="googleMap"></div>
+      <h3>Address</h3>
+      <div id="ficheResto"></div>
+      <a id="btnUpdate" class="btn" href="#">Modifier</a>
+      <a id="btnList" class="btn" href="index.html">Retour Liste</a>
+    </section>
 </div>
 <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../models/restaurants.js"></script>
+<script type="text/javascript" src="../routes/restaurant.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
