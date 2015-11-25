@@ -38,28 +38,35 @@ function Restaurants() {
   });
 
   let restaurant = mongoose.model('Restaurant', restaurantSchema);
+
   function getAll(next) {
     restaurant.find(null, function(err, data){
       if (err) throw err;
       next(null,data);
     }).sort([['name','ascending']]);
   }
+
   function getById(id,next) {
     restaurant.findById(id, function(err, data){
       if (err) throw err;
       next(null,data);
     });
   }
-  // function getByName(name,next) {
-  //   restaurant.find(name, function(err, data){
-  //     if (err) throw err;
-  //     next(null,data);
-  //   });
-  // }
-  var that = {};
-  that.getAll = getAll;
-  that.getById = getById;
-  // that.getByName = getByName;
-  return that;
+
+  function getBySpecifiedField(field, searchValue,next) {
+  var query = {[field]:new RegExp(searchValue,"i")};
+  restaurant.findOne(query, function(err, data) {
+    if (err) throw err;
+    console.log(data)
+    next(null,data);
+  });
 }
+
+var that = {};
+that.getAll = getAll;
+that.getById = getById;
+that.getBySpecifiedField = getBySpecifiedField;
+return that;
+}
+
 module.exports = Restaurants;

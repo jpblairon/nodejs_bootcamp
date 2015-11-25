@@ -15,12 +15,14 @@ router.get('/:id', function(req, res) {
       res.json(data);
   });
 });
-// router.get('/:name', function(req, res) {
-//   let name = req.params.name;
-//   restaurantModel.getByName(name,function(err, data) {
-//     if(err) throw err;
-//       res.json(data);
-//   });
-// });
+
+router.get('/:field/:searchValue', function(req, res) {
+  let field = req.params.field;
+  let searchValue = req.params.searchValue;
+  restaurantModel.getBySpecifiedField(field, searchValue, function(err, data) {
+    if (err) throw err;
+    res.json(data);
+  });
+})
 
 module.exports = router;

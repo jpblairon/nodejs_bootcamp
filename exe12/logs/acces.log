@@ -33,3 +33,5 @@
 ::1 - - [24/Nov/2015:15:01:54 +0000] "GET /api/restaurants/ HTTP/1.1" 200 571 "-" "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36"
 ::1 - - [24/Nov/2015:15:03:27 +0000] "GET /api/restaurants/ HTTP/1.1" 200 571 "-" "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36"
 ::1 - - [24/Nov/2015:15:12:54 +0000] "GET /api/restaurants/ HTTP/1.1" 200 571 "-" "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36"
+::1 - - [25/Nov/2015:07:20:30 +0000] "GET /api/restaurants HTTP/1.1" 200 571 "-" "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36"
+::1 - - [25/Nov/2015:07:20:30 +0000] "GET /favicon.ico HTTP/1.1" 404 24 "http://localhost/api/restaurants" "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36"
