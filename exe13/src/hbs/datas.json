@@ -1,0 +1,10 @@
+{
+  "author":"JP Blairon",
+  "menuItems": [
+    {"name":"item1", "link": "http://www.google.com"},
+    {"name":"item2", "link": "http://www.tripyt.com"},
+    {"name":"item3", "link": "http://www.technocite.com"},
+    {"name":"item4", "link": "http://www.google.com"},
+    {"name":"item5", "link": "http://www.google.com"}
+  ]
+}
